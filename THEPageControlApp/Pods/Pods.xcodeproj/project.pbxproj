@@ -29,30 +29,30 @@
 
 /* Begin PBXFileReference section */
 		05CAD5E19C4FC0D28B135D19D434353C /* THEPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THEPageControl.h; path = THEPageControl/Source/THEPageControl.h; sourceTree = "<group>"; };
-		1561902458271B0A06B3F05ABD41EE18 /* THEPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = THEPageControl.framework; path = THEPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1561902458271B0A06B3F05ABD41EE18 /* THEPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THEPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB026910F761C07A6CB990BB24348BE /* Pods-THEPageControlApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-THEPageControlApp-frameworks.sh"; sourceTree = "<group>"; };
 		2535CA40EC412816E1C21BE6508A6932 /* THEPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THEPageControl-umbrella.h"; sourceTree = "<group>"; };
 		2F3BC7945F012519DC2C0AF6264CB1FE /* Pods-THEPageControlApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-THEPageControlApp.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		427C9E91A2634E64C16557B0FFF78056 /* Pods-THEPageControlApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-THEPageControlApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		48F00F905B4441016DD5FAD3E901C436 /* THEPageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = THEPageControl.debug.xcconfig; sourceTree = "<group>"; };
-		49C40DF5CB5334A2F1E8C2C48C93E3BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		49C40DF5CB5334A2F1E8C2C48C93E3BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5F1AB0E2AD308C21481668A23901CEDF /* THEPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = THEPageControl.modulemap; sourceTree = "<group>"; };
-		619D6DE0819D5F901EB7C5BA344B832E /* THEPageControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = THEPageControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		619D6DE0819D5F901EB7C5BA344B832E /* THEPageControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = THEPageControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6713D59403E50593F7AD4044C234D961 /* THEPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = THEPageControl.swift; path = THEPageControl/Source/THEPageControl.swift; sourceTree = "<group>"; };
 		69C57A4B4D14E8E6EF8FBF91C301AC3F /* Pods-THEPageControlApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-THEPageControlApp-dummy.m"; sourceTree = "<group>"; };
 		796F74DE9A9E6BADD0A9E204A3F1F197 /* THEPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "THEPageControl-prefix.pch"; sourceTree = "<group>"; };
 		82C923B6FDD91499A0D95F0D81368E6E /* THEPageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = THEPageControl.release.xcconfig; sourceTree = "<group>"; };
 		878D36437F2D1CF658AB9A3F37F1BF41 /* Pods-THEPageControlApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-THEPageControlApp-Info.plist"; sourceTree = "<group>"; };
 		8EF2ACE4CC45C3425DA14BF0BF6FDCB9 /* Pods-THEPageControlApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-THEPageControlApp-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A13ACB43F5CE955A1D9A6C085F4F0F55 /* Pods-THEPageControlApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-THEPageControlApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ACD52383F70DFD9F9940CB4CB9491552 /* Pods-THEPageControlApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-THEPageControlApp.release.xcconfig"; sourceTree = "<group>"; };
 		B3FD70D1DB44EB449A2F90C6085E7567 /* Pods-THEPageControlApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-THEPageControlApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C400F5FCD41E486F3A4C3B13D584C0A6 /* THEPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "THEPageControl-dummy.m"; sourceTree = "<group>"; };
-		CEAFCA85EFAA924B1B9148D3669C6A61 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CEAFCA85EFAA924B1B9148D3669C6A61 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D715E079DF260C9C8E28DAB601EF16D3 /* THEPageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "THEPageControl-Info.plist"; sourceTree = "<group>"; };
-		F49C7A6E50189E1776142D64B68E2669 /* Pods_THEPageControlApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_THEPageControlApp.framework; path = "Pods-THEPageControlApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49C7A6E50189E1776142D64B68E2669 /* Pods_THEPageControlApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_THEPageControlApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,7 +332,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/THEPageControl/THEPageControl-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/THEPageControl/THEPageControl-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/THEPageControl/THEPageControl.modulemap";
 				PRODUCT_MODULE_NAME = THEPageControl;
@@ -364,7 +364,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-THEPageControlApp/Pods-THEPageControlApp-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-THEPageControlApp/Pods-THEPageControlApp.modulemap";
@@ -434,8 +434,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -457,7 +456,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/THEPageControl/THEPageControl-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/THEPageControl/THEPageControl-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/THEPageControl/THEPageControl.modulemap";
 				PRODUCT_MODULE_NAME = THEPageControl;
@@ -552,7 +551,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-THEPageControlApp/Pods-THEPageControlApp-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-THEPageControlApp/Pods-THEPageControlApp.modulemap";

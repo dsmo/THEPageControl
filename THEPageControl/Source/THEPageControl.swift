@@ -29,22 +29,19 @@ public class PageControl: UIView {
         public struct Style {
 
             public enum Shape {
-                case circle
-                case square
+                case circle(radius: CGFloat)
+                case square(size: CGSize, radius: CGFloat)
             }
 
-            public var radius: Float
+            public var shape: Shape
             public var fillColor: UIColor
             public var strokeColor: UIColor
             public var strokeWidth: Float
-            public var shape: Shape
 
-            public init(radius: Float,
+            public init(shape: Shape,
                         fillColor: UIColor,
                         strokeColor: UIColor,
-                        strokeWidth: Float,
-                        shape: Shape = .circle) {
-                self.radius = radius
+                        strokeWidth: Float) {
                 self.fillColor = fillColor
                 self.strokeColor = strokeColor
                 self.strokeWidth = strokeWidth
@@ -247,8 +244,7 @@ public class PageControl: UIView {
         }
     }
 
-    @objc
-    private func handleTap(recognizer: UITapGestureRecognizer) {
+    @objc private func handleTap(recognizer: UITapGestureRecognizer) {
         let tapLocation = recognizer.location(in: self)
         let paddings = self.configuration.paddings
         let center = CGPoint(
@@ -264,7 +260,8 @@ public class PageControl: UIView {
             diff = tapLocation.y - center.y
         }
 
-        let newIndex = round(self.activeDotIndex) + ((diff > 0) ? 1 : -1)
+        let newIndex = (round(self.activeDotIndex) + ((diff > 0) ? 1 : -1)).clamped(0, Float(self.dots.count - 1))
+        if self.activeDotIndex == newIndex { return }
         self.setActiveDotIndex(newIndex, animated: true)
         self.onActiveDotIndexChanged?(newIndex)
     }
@@ -329,8 +326,7 @@ private class Animator: NSObject {
         self.work(0)
     }
 
-    @objc
-    private func onFire(displayLink: CADisplayLink) {
+    @objc private func onFire(displayLink: CADisplayLink) {
         if self.initialTimestamp == nil {
             self.initialTimestamp = displayLink.timestamp
         }
@@ -383,13 +379,14 @@ private extension PageControl {
         }
 
         private func applyStyle(style: Dot.Style) {
-            self.frame.size = CGSize(width: CGFloat(style.radius * 2), height: CGFloat(style.radius * 2))
             self.backgroundColor = style.fillColor
             switch style.shape {
-            case .circle:
-                self.layer.cornerRadius = CGFloat(style.radius)
-            case .square:
-                self.layer.cornerRadius = 0
+            case .circle(let radius):
+                self.frame.size = CGSize(width: radius * 2, height: radius * 2)
+                self.layer.cornerRadius = radius
+            case .square(let size, let radius):
+                self.frame.size = size
+                self.layer.cornerRadius = radius
             }
             self.layer.borderWidth = CGFloat(style.strokeWidth)
             self.layer.borderColor = style.strokeColor.cgColor
@@ -410,7 +407,11 @@ private extension Float {
     func lerp(_ from: CGFloat, _ to: CGFloat) -> CGFloat {
         return from + (CGFloat(self.clamped(0, 1)) * (to - from))
     }
-
+    
+    func lerp(_ from: CGSize, _ to: CGSize) -> CGSize {
+        return CGSize(width: self.lerp(from.width, to.width), height: self.lerp(from.height, to.height))
+    }
+    
     func lerp(_ from: UIColor, _ to: UIColor) -> UIColor {
         var (fromRed, fromGreen, fromBlue, fromAlpha): (CGFloat, CGFloat, CGFloat, CGFloat) = (0, 0, 0, 0)
         from.getRed(&fromRed, green: &fromGreen, blue: &fromBlue, alpha: &fromAlpha)
@@ -433,14 +434,36 @@ private extension Float {
             alpha: self.lerp(fromAlpha, toAlpha)
         )
     }
+    
+    func lerp(_ from: PageControl.Dot.Style.Shape, _ to: PageControl.Dot.Style.Shape) -> PageControl.Dot.Style.Shape {
+        var shape: PageControl.Dot.Style.Shape = .circle(radius: 1)
+        switch from {
+        case .circle(let fromRadius):
+            switch to {
+            case .circle(let toRaidus):
+                shape = .circle(radius: self.lerp(fromRadius, toRaidus))
+            case .square(let toSize, let toRaidus):
+                let fromSize = CGSize(width: fromRadius * 2, height: fromRadius * 2)
+                shape = .square(size: self.lerp(fromSize, toSize), radius: self.lerp(fromRadius, toRaidus))
+            }
+        case .square(let fromSize, let fromRadius):
+            switch to {
+            case .circle(let toRadius):
+                let toSize = CGSize(width: toRadius * 2, height: toRadius * 2)
+                shape = .square(size: self.lerp(fromSize, toSize), radius: self.lerp(fromRadius, toRadius))
+            case .square(let toSize, let toRadius):
+                shape = .square(size: self.lerp(fromSize, toSize), radius: self.lerp(fromRadius, toRadius))
+            }
+        }
+        return shape
+    }
 
     func lerp(_ from: PageControl.Dot.Style, _ to: PageControl.Dot.Style) -> PageControl.Dot.Style {
         return PageControl.Dot.Style(
-            radius: self.lerp(from.radius, to.radius),
+            shape: self.lerp(from.shape, to.shape),
             fillColor: self.lerp(from.fillColor, to.fillColor),
             strokeColor: self.lerp(from.strokeColor, to.strokeColor),
-            strokeWidth: self.lerp(from.strokeWidth, to.strokeWidth),
-            shape: to.shape
+            strokeWidth: self.lerp(from.strokeWidth, to.strokeWidth)
         )
     }
 }
@@ -462,14 +485,14 @@ extension PageControl.Dot {
 
     public static var `default`: PageControl.Dot {
         let regularStyle = PageControl.Dot.Style(
-            radius: 10,
+            shape: .circle(radius: 10),
             fillColor: .clear,
             strokeColor: .black,
             strokeWidth: 2
         )
 
         let activeStyle = PageControl.Dot.Style(
-            radius: 10,
+            shape: .circle(radius: 10),
             fillColor: .black,
             strokeColor: .clear,
             strokeWidth: 0

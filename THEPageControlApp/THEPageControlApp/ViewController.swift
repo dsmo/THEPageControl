@@ -25,14 +25,14 @@ extension PageControl.Dot {
 
     static var customStyle1: PageControl.Dot {
         let regularStyle = PageControl.Dot.Style(
-            radius: 10,
+            shape: .circle(radius: 10),
             fillColor: .red,
             strokeColor: .black,
             strokeWidth: 10
         )
 
         let activeStyle = PageControl.Dot.Style(
-            radius: 10,
+            shape: .circle(radius: 10),
             fillColor: .red,
             strokeColor: .black,
             strokeWidth: 5
@@ -46,14 +46,14 @@ extension PageControl.Dot {
 
     static var customStyle2: PageControl.Dot {
         let regularStyle = PageControl.Dot.Style(
-            radius: 10,
+            shape: .circle(radius: 10),
             fillColor: (UIColor.gray).withAlphaComponent(0.5),
             strokeColor: .clear,
             strokeWidth: 0
         )
 
         let activeStyle = PageControl.Dot.Style(
-            radius: 15,
+            shape: .circle(radius: 15),
             fillColor: .gray,
             strokeColor: .clear,
             strokeWidth: 0
@@ -67,14 +67,14 @@ extension PageControl.Dot {
 
     static var customStyle3: PageControl.Dot {
         let regularStyle = PageControl.Dot.Style(
-            radius: 10,
+            shape: .circle(radius: 10),
             fillColor: (UIColor.orange).withAlphaComponent(0.5),
             strokeColor: .clear,
             strokeWidth: 0
         )
 
         let activeStyle = PageControl.Dot.Style(
-            radius: 15,
+            shape: .circle(radius: 15),
             fillColor: .orange,
             strokeColor: .clear,
             strokeWidth: 0
